@@ -11,6 +11,8 @@ exports.createNewJob = asyncHandler(async (req, res, next) => {
     corporateType: req.body.corporateType,
     employmentType: req.body.employmentType,
     salary: req.body.salary,
+    jobRole:req.body.jobRole,
+    responsibilities:req.body.responsibilities,
   });
   res.status(200).json({
     success: true,
@@ -56,6 +58,8 @@ exports.updateJob = asyncHandler(async (req, res) => {
     corporateType: req.body.corporateType,
     employmentType: req.body.employmentType,
     salary: req.body.salary,
+    jobRole:req.body.jobRole,
+    responsibilities:req.body.responsibilities,
   };
   const updatedJob = await Jobs.findByIdAndUpdate(req.params.id, updatedData);
   res.status(200).json({

@@ -5,7 +5,6 @@ const jobSchema = new mongoose.Schema(
     name: {
       type: String,
       required: true,
-      unique: true,
     },
     location: {
       type: String,
@@ -28,6 +27,14 @@ const jobSchema = new mongoose.Schema(
       required: true,
     },
     salary: {
+      type: String,
+      required: true,
+    },
+    jobRole: {
+      type: String,
+      required: true,
+    },
+    responsibilities: {
       type: String,
       required: true,
     },
